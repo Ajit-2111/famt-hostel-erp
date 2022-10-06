@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@100&family=PT+Sans+Narrow&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
+      #welcome {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      #img-overlay {
+        position: absolute; /* Sit on top of the page content */
+        /* display: none; Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: -5px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+      }
+      #welcome-centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Dancing Script", cursive;
+        font-size: xx-large;
+        z-index: 5;
+      }
+      .facility-icons {
+        padding: 20px;
+        width: 30px;
+        flex-grow: 1;
+        margin: 10px;
+        /* background-color: bisque; */
+      }
+      .facility-icons:hover {
+        background-color: bisque;
+      }
+      #facility-options {
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+      }
+      .facility-icons-name {
+        text-align: center;
+      }
+      #facilities,
+      #about-famt-hostel,
+      #photogallery {
+        display: block;
+        max-width: 1000px;
+        margin: auto;
+      }
+      #about-famt-hostel P {
+        text-align: justify;
+      }
+      .main-headings {
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        color: orangered;
+        font-size: 80px;
+        padding: 10px 0px;
+        margin: 10px 0px;
+      }
+      #contactinfo {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+      }
+      #welcome,
+      #about-famt-hostel,
+      #facilities,
+      #photogallery,
+      #contactus {
+        margin-bottom: 75px;
+      }
+      #contactdetails h3 {
+        font-size: 25px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      #loginAndMenu {
+        display: flex;
+      }
+      #loginAndMenu button {
+        background-color: rgb(50, 172, 13);
+        padding: 0px 15px;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: "Courier New", Courier, monospace;
+        margin: 0px 25px;
+        border: none;
+        border-radius: 15px 0px 15px 0px;
+        color: aliceblue;
+        transition: 0.5s;
+      }
+      #loginAndMenu button:hover {
+        background-color: rgb(38, 136, 9);
+        border-radius: 0px 15px 0px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo" title="FAMT Hostel"
+          ><img src="static/college-icon.png" alt="FAMT"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link hover-underline-animation"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation"
+              >Student Detail</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation"
+              >Hostel Detail</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation"
+              >Mess Detail</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation">Fees</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation"
+              >Leave Application</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link hover-underline-animation">Complaints</a>
+          </li>
+        </ul>
+        <div id="loginAndMenu">
+          <button onclick="document.location = 'login.html'">Login</button>
+          <div class="hamburger">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="welcome">
+        <div id="img-overlay"></div>
+        <img
+          class="center-text-img"
+          src="static/college.jpg"
+          alt="FAMT"
+          style="width: 100%"
+        />
+        <div id="welcome-centered">
+          <h1>WELCOME</h1>
+          <h4>to</h4>
+          <h4>FAMT Hostel</h4>
+        </div>
+      </div>
+      <div id="about-famt-hostel">
+        <h1 class="main-headings">About Us</h1>
+        <p>
+          The management feels happy to offer you the accommodation in FAMT
+          Hostel. FAMT Hostel provides each student an ideal environment which
+          is conducive to the single-minded pursuit of academic excellence and
+          development of a keen sensitivity for community living. Responsible
+          citizens are expected to maintain respect and consideration for others
+          and community living cannot be harmonious without this basic
+          requirement of individual conduct. Hostel life provides you the best
+          opportunity to internalize such principles of community life. It is
+          also meant to promote your development as a well-groomed and balanced
+          person who is firmly rooted in the values of integrity, purity of
+          conduct and compassion which are common to all religions.
+        </p>
+        <br />
+        <br />
+        <p>
+          FAMT earnestly upholds the values and principles which are meant to
+          promote individual development, along with common welfare. Strict
+          adherence to the rules of discipline is an irreducible minimum
+          requirement for maintaining the values of hostel life.
+        </p>
+      </div>
+      <div id="facilities">
+        <h1 class="main-headings">Facilities</h1>
+        <div id="facility-options">
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-bus.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Transport</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-coffee-cup.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Tea & Coffee</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-indoor-games.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Indoor Games</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-reception.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">24x7 Reception</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-tv-monitor.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">TV</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-kitchen.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Kitchen</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-water-heater.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Hot Shower</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-wifi-router.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Free Wifi</p>
+          </div>
+          <div>
+            <img
+              class="facility-icons"
+              src="static/facility-first-aid-kit.png"
+              alt=""
+              style="width: 150px"
+            />
+            <p class="facility-icons-name">Medical Facility</p>
+          </div>
+        </div>
+      </div>
+      <div id="photogallery">
+        <h1 class="main-headings">PhotoGallery</h1>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="static/hostel-img-1.jpg" width="100%" />
+            <div class="text"><h1>Caption Text</h1></div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="static/hostel-img-2.jpg" width="100%" />
+            <div class="text"><h1>Caption Two</h1></div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="static/hostel-img-3.jpg" width="100%" />
+            <div class="text"><h1>Caption Three</h1></div>
+          </div>
+          <div class="mySlides fade">
+            <img src="static/hostel-img-4.jpg" width="100%" />
+            <div class="text"><h1>Caption four</h1></div>
+          </div>
+          <div class="mySlides fade">
+            <img src="static/hostel-img-5.jpg" width="100%" />
+            <div class="text"><h1>Caption five</h1></div>
+          </div>
+          <div class="mySlides fade">
+            <img src="static/hostel-img-6.jpg" width="100%" />
+            <div class="text"><h1>Caption five</h1></div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+      </div>
+      <div id="contactus">
+        <h1 class="main-headings">Contacts</h1>
+        <div id="contactinfo">
+          <div id="contactdetails">
+            <h3>Address</h3>
+            <br />
+            <p>
+              Finolex Industries Limited Housing Colony at Zadgaon, Ratnagiri
+            </p>
+            <br />
+            <br />
+            <h3>Phone</h3>
+            <br />
+            <p>Chief Warden : 9423291789</p>
+            <br />
+            <br />
+            <h3>E-Mail</h3>
+
+            <br />
+            <p>muralimohanv@famt.ac.in</p>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15261.323051812577!2d73.27828643582104!3d17.007438321823834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea0d737eef0de5%3A0xd7820590f8c9e7c4!2sfinolex%20colony%2C%20Ratnagiri%2C%20Maharashtra%20415612!5e0!3m2!1sen!2sin!4v1665064969670!5m2!1sen!2sin"
+            width="550"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-content">
+      <div>
+        <h3>FAMT Hostel</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+          cupiditate sequi ipsam laborum voluptatum corrupti quae suscipit
+          nostrum ullam voluptates? Vel magnam ad neque ullam, omnis assumenda
+          animi saepe? Error molestiae dolor distinctio qui officiis soluta,
+          explicabo assumenda repellat nobis a voluptatem deserunt tenetur
+          cupiditate inventore, veritatis ex. Est, nam nemo!
+        </p>
+      </div>
+      <ul class="socials"></ul>
+      <div class="footer-bottom">
+        <p>copyright &copy;2021 <a href="index.html">FAMT HOSTEL</a></p>
+        <div>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index-contact.html">Contact</a></li>
+            <li><a href="index-about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Code start for navbar hamburger
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", mobileMenu);
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+    // Code end for navbar hamburger
+
+    // Code start for slideshow
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    let slideIndex = 1;
+    let timeout;
+    let timeoutInterval = 4000;
+    showSlide(slideIndex);
+    function plusSlides(n) {
+      clearTimeout(timeout);
+      showSlide((slideIndex += n));
+    }
+    function currentSlide(n) {
+      clearTimeout(timeout);
+      showSlide((slideIndex = n));
+    }
+    function showSlide(n) {
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      timeout = setTimeout(() => showSlide((slideIndex += 1)), timeoutInterval);
+    }
+    // Code end for slideshow
+  </script>
+</html>
